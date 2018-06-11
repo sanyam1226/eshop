@@ -1,0 +1,50 @@
+
+<div id="myBox" class="contrainer-fluid">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-3">
+				<ul class="list-group">
+			<li class="list-group-item"><a  href="#">category</a></li>		
+					<% catedata.forEach(function(x){ %>
+            <li class="list-group-item"><a  href="#"><%= x.name; %></a></li>
+       <% }); %>
+					
+					
+				</ul>
+			</div>
+			<div class="col-sm-9">
+				<ol class="breadcrumb" style="background-color: #000; color: #FFF !important;">
+					<li>Popular Items</li>
+				</ol>
+
+				<div class="row">
+
+                  <% prodata.forEach(function(x){ %>
+
+			
+
+						
+					<div class="col-sm-4">
+						<div class="panel panel-default">
+							<div class="panel-heading">
+
+								<h4><%= x.dName; %> <small>(<%=x.Price; %>)</small> </h4>
+							</div>
+<div class="panel-body">
+	<img style="height: 150px; width: 100%;" src="/productimage/<%= x.image; %>" class="img img-thumbnail" />
+</div>
+							<div class="panel-footer">
+								<button class="btn btn-primary btn-sm">Buy</button>
+								<button class="btn btn-info btn-sm">Add To Cart</button>
+							</div>
+						</div>
+					</div>
+
+			
+             <% }); %> 
+            </div>
+			 
+		</div>
+	</div>
+</div>
+
